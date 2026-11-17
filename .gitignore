@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+*.log
+data/FinDKG/
+data/Higgs/
+data/OGBN-MAG/
+data/A-share/

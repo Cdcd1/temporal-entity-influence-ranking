@@ -1,0 +1,80 @@
+{
+  "dataset": "HiDy",
+  "source_doi": "10.5281/zenodo.12630355",
+  "source_version": "1.10",
+  "task_package": "HiDy_ranking_depth3_protocol_v3",
+  "label_generator_version": "observed_strict_temporal_finite_reach_v2",
+  "parameters": {
+    "candidate_limit": null,
+    "candidate_types": [
+      "company",
+      "securities_company"
+    ],
+    "fact_level_deduplication": true,
+    "max_label_depth": 3,
+    "min_history_events": 1,
+    "recent_ratio": 0.15,
+    "seed": 20260902,
+    "strata": 10
+  },
+  "primary_relations": [
+    "be_increased_holding",
+    "be_invested",
+    "be_reduced_holding",
+    "be_supplied",
+    "cooperate",
+    "dispute",
+    "fall",
+    "increase_holding",
+    "invest",
+    "negative",
+    "positive",
+    "reduce_holding",
+    "rise",
+    "supply"
+  ],
+  "propagation_directions": {
+    "be_increased_holding": "stored",
+    "be_invested": "stored",
+    "be_reduced_holding": "stored",
+    "be_supplied": "stored",
+    "cooperate": "stored",
+    "dispute": "stored",
+    "fall": "stored",
+    "increase_holding": "stored",
+    "invest": "stored",
+    "negative": "stored",
+    "positive": "stored",
+    "reduce_holding": "stored",
+    "rise": "stored",
+    "supply": "stored"
+  },
+  "cutoffs": [
+    {
+      "split_id": "train",
+      "cutoff": 1648166400,
+      "purge_end": 1648166400,
+      "label_end": 1682208000,
+      "train_or_val_or_test": "train",
+      "protocol": "state_available_then_post_state_primary_event_tertiles"
+    },
+    {
+      "split_id": "validation",
+      "cutoff": 1682208000,
+      "purge_end": 1682208000,
+      "label_end": 1685923200,
+      "train_or_val_or_test": "validation",
+      "protocol": "state_available_then_post_state_primary_event_tertiles"
+    },
+    {
+      "split_id": "test",
+      "cutoff": 1685923200,
+      "purge_end": 1685923200,
+      "label_end": 1719767940,
+      "train_or_val_or_test": "test",
+      "protocol": "state_available_then_post_state_primary_event_tertiles"
+    }
+  ],
+  "candidate_rows": 8917,
+  "label_rows": 8917
+}
